@@ -4,3 +4,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* MAIN */
+h2{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.price-box{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.price-box span{
+    font-size: 1.3em;
+}
+

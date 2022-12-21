@@ -11,3 +11,7 @@ console.log("Il passeggerò percorrerà: ", numerokm);
 // Chiedo l'età al passeggero 
 const etàpasseggero = prompt("Quanti anni hai?");
 console.log("Il passeggerò ha: ", etàpasseggero);
+
+// Calcolo prezzo standard
+var molt = numerokm * 0.21;
+document.getElementById("ticket-price").innerHTML = molt;
