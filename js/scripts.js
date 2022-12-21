@@ -12,6 +12,14 @@ console.log("Il passeggerò percorrerà: ", numerokm);
 const etàpasseggero = prompt("Quanti anni hai?");
 console.log("Il passeggerò ha: ", etàpasseggero);
 
-// Calcolo prezzo standard
-var molt = numerokm * 0.21;
-document.getElementById("ticket-price").innerHTML = molt;
+// Calcolo prezzo passeggero minorenne o over 65 o adulto senza vantaggi
+if (etàpasseggero < 18) {
+    let moltjunior = ((numerokm * 0.21) / 100) * 80;
+    document.getElementById("ticket-price").innerHTML = moltjunior;
+} else if (etàpasseggero > 65){
+    let moltsenior = ((numerokm * 0.21) / 100) * 60;
+    document.getElementById("ticket-price").innerHTML = moltsenior;
+} else {
+    let molt = numerokm * 0.21;
+    document.getElementById("ticket-price").innerHTML = molt;
+}
