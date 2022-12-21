@@ -5,21 +5,21 @@ alert("Benvenuto sul sito di Trenitalia!");
 alert("Nei prossimi passaggi ti saranno richiesti i dati necessari per il calcolo del prezzo del tuo biglietto")
 
 // Chiedo il numero di km che vuole fare 
-const numerokm = prompt("Quanti km percorrerai?");
-console.log("Il passeggerò percorrerà: ", numerokm);
+const km = prompt("Quanti km percorrerai?");
+console.log("Il passeggerò percorrerà: ", km);
 
 // Chiedo l'età al passeggero 
-const etàpasseggero = prompt("Quanti anni hai?");
-console.log("Il passeggerò ha: ", etàpasseggero);
+const age = prompt("Quanti anni hai?");
+console.log("Il passeggerò ha: ", age);
 
 // Calcolo prezzo passeggero minorenne o over 65 o adulto senza vantaggi
-if (etàpasseggero < 18) {
-    let moltjunior = ((numerokm * 0.21) / 100) * 80;
-    document.getElementById("ticket-price").innerHTML = moltjunior;
-} else if (etàpasseggero > 65){
-    let moltsenior = ((numerokm * 0.21) / 100) * 60;
-    document.getElementById("ticket-price").innerHTML = moltsenior;
+if (age < 18) {
+    let juniorprice = ((km * 0.21) / 100) * 80;
+    document.getElementById("ticket-price").innerHTML = juniorprice.toFixed(2);
+} else if (age > 65){
+    let seniorprice = ((km * 0.21) / 100) * 60;
+    document.getElementById("ticket-price").innerHTML = seniorprice.toFixed(2);
 } else {
-    let molt = numerokm * 0.21;
-    document.getElementById("ticket-price").innerHTML = molt;
+    let price = km * 0.21;
+    document.getElementById("ticket-price").innerHTML = price;
 }
